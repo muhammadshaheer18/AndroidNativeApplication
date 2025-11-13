@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Meezan Bank</string>
+    <string name="title_login"> </string>
+    <string name="title_home">Meezan Bank Limited</string>
+    <string name="title_qrpay"> </string>
+    <string name="title_contacts"> </string>
+    <string name="title_FAQ"> </string>
+    <string name="enter_password">Enter Password</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="forgot_login_details">Forgot Login Details?</string>
+    <string name="register_for_mobile_app">Register for Mobile App</string>
+    <string name="open_a_new_account">Open a New Account</string>
+    <string name="biometeric_login">Biometeric Login</string>
+    <string name="login">Login</string>
+    <string name="remember_my_username">Remember my Username</string>
+</resources>

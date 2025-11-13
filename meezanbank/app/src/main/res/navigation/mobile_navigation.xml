@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_login">
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.app.meezanbank.ui.loginscreen.LoginScreenFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_loginscreen" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.app.meezanbank.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_contacts"
+        android:name="com.app.meezanbank.ui.contact.ContactsFragment"
+        android:label="@string/title_contacts"
+        tools:layout="@layout/fragment_contacts" />
+
+    <fragment
+        android:id="@+id/navigation_qrpay"
+        android:name="com.app.meezanbank.ui.qrpay.QrpayFragment"
+        android:label="@string/title_qrpay"
+        tools:layout="@layout/fragment_qrpay" />
+
+    <fragment
+        android:id="@+id/navigation_FAQ"
+        android:name="com.app.meezanbank.ui.faq.FAQFragment"
+        android:label="@string/title_FAQ"
+        tools:layout="@layout/fragment_faq" />
+</navigation>
