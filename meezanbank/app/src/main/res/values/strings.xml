@@ -15,4 +15,22 @@
     <string name="biometeric_login">Biometeric Login</string>
     <string name="login">Login</string>
     <string name="remember_my_username">Remember my Username</string>
+    <string name="registered_office_head_office"><![CDATA[Registered Office & Head Office]]></string>
+    <string name="meezan_address">Meezan Bank Limited, Meezan House, C-25 Estate Avenue, SITE, Karachi.</string>
+    <string name="customer_care_unit">Customer Care Unit</string>
+    <string name="fax">Fax: +92 (21) 36406049</string>
+    <string name="phone"><![CDATA[Phone: +92 (21) 38103500 & +92 (21) 37133500]]></string>
+    <string name="email">Email: info@meezanbank.com</string>
+    <string name="contactHeader">Contact Us</string>
+    <string name="complaint_text">To record a Complaint, use the following channels,</string>
+    <string name="fax2">Fax: +92 (21) 36406023</string>
+    <string name="complaints_email">Email: complaints@meezanbank.com</string>
+    <string name="websites"><![CDATA[Websites: www.meezanbank.com]]></string>
+    <string name="_24_7_call_center_92_21_111_331_331_92_21_111_331_332"><![CDATA[24/7 Call Center : +92 (21) 111-331-331 & +92 (21) 111-331-332]]></string>
+    <string name="contact_footer" />
+    <string name="contact_image" />
+    <string name="callcenterPhone"><![CDATA[+92 (21) 111-331-331 & +92 (21) 111-331-332]]></string>
+    <string name="GuaranteeHeading">Meezan Bank Guarantee Verification</string>
+    <string name="Respond">You can also write a letter to \'The Manager Customer Care Unit\' and post it to our Head Office at Meezan House, C-25, Estate Avenue, SITE, Karachi- Pakistan. Once we receive your complaint, it will be addressed promptly and we will respond to you within 7 to 15 business days.</string>
+    <string name="callCenterHeading">Call Center</string>
 </resources>
