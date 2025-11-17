@@ -50,7 +50,7 @@
 
         <!-- Username Input -->
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/username"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="48dp"
@@ -76,7 +76,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/remember_my_username"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editTextText" />
+            app:layout_constraintTop_toBottomOf="@id/username" />
 
         <!-- Password Label -->
         <TextView
@@ -95,7 +95,7 @@
 
         <!-- Password Input -->
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/password"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="48dp"
@@ -122,11 +122,11 @@
             android:textColor="#7A147A"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editTextTextPassword" />
+            app:layout_constraintTop_toBottomOf="@id/password" />
 
         <!-- Login Button -->
         <Button
-            android:id="@+id/button"
+            android:id="@+id/loginButton"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_marginStart="48dp"
@@ -146,7 +146,7 @@
             android:src="@drawable/scanlogo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button" />
+            app:layout_constraintTop_toBottomOf="@id/loginButton" />
 
         <!-- Biometric Login Text -->
         <TextView

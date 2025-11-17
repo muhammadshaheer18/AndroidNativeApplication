@@ -33,4 +33,12 @@
     <string name="GuaranteeHeading">Meezan Bank Guarantee Verification</string>
     <string name="Respond">You can also write a letter to \'The Manager Customer Care Unit\' and post it to our Head Office at Meezan House, C-25, Estate Avenue, SITE, Karachi- Pakistan. Once we receive your complaint, it will be addressed promptly and we will respond to you within 7 to 15 business days.</string>
     <string name="callCenterHeading">Call Center</string>
+    <string name="adc_email">Email: waqas.alavi@meezanbank.com</string>
+    <string name="adc_phone">Ph: +92 (21) 38103500, Extension: 2096</string>
+    <string name="adc_name">Name: Waqas Ahmed Alavi</string>
+    <string name="adc_heading">Alternate Delivery Channel (ADC) Operations Contacts</string>
+    <string name="guarantee_email">Email: mbl.guaranteeverification@meezanbank.com</string>
+    <string name="credit_dept_heading">Credit Administration Department</string>
+    <string name="credit_dept_name">Name: Munawar Bilal</string>
+    <string name="credit_dept_phone">Contact: + 92 (21) 38103500 Ext: 3560</string>
 </resources>

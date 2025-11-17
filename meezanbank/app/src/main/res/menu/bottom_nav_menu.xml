@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/navigation_login"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/loginicon"
         android:title="@string/title_login" />
 
     <item
@@ -21,10 +21,10 @@
         android:icon="@drawable/faqs"
         android:title="@string/title_FAQ" />
 
-<!--    <item-->
-<!--        android:id="@+id/navigation_home"-->
-<!--        android:icon="@drawable/ic_home_black_24dp"-->
-<!--        android:title="@string/title_home" />-->
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
 
 
 </menu>

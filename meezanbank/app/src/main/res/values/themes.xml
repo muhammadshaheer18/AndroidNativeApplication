@@ -13,5 +13,7 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="actionBarSize">56dp</item>
         <!-- Customize your theme here. -->
+
     </style>
+
 </resources>
