@@ -30,7 +30,7 @@ public class LoginScreenFragment extends Fragment {
         View root = binding.getRoot();
 
         // Hard-coded credentials
-        String usernameCheck = "Shaheer";
+        String usernameCheck = "ShaheerArif";
         String passwordCheck = "123abc";
 
         binding.loginButton.setOnClickListener(v -> {
