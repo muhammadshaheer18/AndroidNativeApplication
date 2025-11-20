@@ -1,0 +1,49 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+  <!-- Phone body outline (#7A147A) -->
+  <path
+      android:pathData="M14,4h36a4,4 0 0 1 4,4v48a4,4 0 0 1 -4,4H14a4,4 0 0 1 -4,-4V8a4,4 0 0 1 4,-4z"
+      android:fillColor="#00000000"
+      android:strokeColor="#7A147A"
+      android:strokeWidth="3"
+      android:strokeLineJoin="round"
+      android:strokeLineCap="round"/>
+
+  <!-- Screen (white) -->
+  <path
+      android:pathData="M17,11h30a3,3 0 0 1 3,3v34a3,3 0 0 1 -3,3H17a3,3 0 0 1 -3,-3V14a3,3 0 0 1 3,-3z"
+      android:fillColor="#FFFFFF"/>
+
+  <!-- Double-sided arrow (green #4CAF50) -->
+  <!-- Arrow line -->
+  <path
+      android:pathData="M22,32h20"
+      android:fillColor="#00000000"
+      android:strokeColor="#4CAF50"
+      android:strokeWidth="3"
+      android:strokeLineJoin="round"
+      android:strokeLineCap="round"/>
+
+  <!-- Left Arrow Head -->
+  <path
+      android:pathData="M26,28 L22,32 L26,36"
+      android:fillColor="#00000000"
+      android:strokeColor="#4CAF50"
+      android:strokeWidth="3"
+      android:strokeLineJoin="round"
+      android:strokeLineCap="round"/>
+
+  <!-- Right Arrow Head -->
+  <path
+      android:pathData="M38,28 L42,32 L38,36"
+      android:fillColor="#00000000"
+      android:strokeColor="#4CAF50"
+      android:strokeWidth="3"
+      android:strokeLineJoin="round"
+      android:strokeLineCap="round"/>
+
+</vector>

@@ -41,4 +41,19 @@
     <string name="credit_dept_heading">Credit Administration Department</string>
     <string name="credit_dept_name">Name: Munawar Bilal</string>
     <string name="credit_dept_phone">Contact: + 92 (21) 38103500 Ext: 3560</string>
+    <string name="mobile_topup">Mobile Topup</string>
+    <string name="share">Share</string>
+    <string name="transactions">Transactions</string>
+    <string name="show_balance">Show Balance</string>
+    <string name="muhammad_shaheer">MUHAMMAD SHAHEER</string>
+    <string name="accountNum">Current Account: 91929442142184</string>
+    <string name="accountHolder">Muhammad Shaheer\n</string>
+    <string name="IBAN">IBAN: PK51MEZN23776482917428172</string>
+    <string name="sendMoneyButton">Send Money</string>
+    <string name="raast_payment">Raast Payment</string>
+    <string name="VIEW_balance">SHOW BALANCE</string>
+    <string name="bill_payment">Bill Payment</string>
+    <string name="card_management">Card Management</string>
+    <string name="zakat_sadqaat"><![CDATA[Zakat & Sadqaat]]></string>
+    <string name="feedback">Feedback</string>
 </resources>
