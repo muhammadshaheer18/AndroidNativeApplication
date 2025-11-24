@@ -7,10 +7,20 @@
     android:background="#7A147A"
     tools:context=".ui.home.HomeFragment">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/homeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#7A147A"
+        android:titleTextColor="@android:color/white"
+        app:title="@string/title_home"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <ImageView
         android:id="@+id/roundContainer"
-        android:layout_width="392dp"
-        android:layout_height="208dp"
+        android:layout_width="374dp"
+        android:layout_height="196dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/roundcontainer2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +104,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/roundContainer"
         app:layout_constraintStart_toStartOf="@+id/roundContainer"
         app:layout_constraintTop_toTopOf="@+id/roundContainer"
-        app:layout_constraintVertical_bias="0.913" />
+        app:layout_constraintVertical_bias="1.0" />
+
 
     <Button
         android:id="@+id/transactionsButton"
@@ -111,15 +122,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/roundContainer"
         app:layout_constraintEnd_toEndOf="@+id/roundContainer"
         app:layout_constraintTop_toTopOf="@+id/roundContainer"
-        app:layout_constraintVertical_bias="0.913" />
-
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="426dp"
         android:layout_height="849dp"
         android:layout_marginTop="20dp"
-        android:background="#F1F1F1"
+        android:background="#f2f2f2"
         android:src="@drawable/roundcontainer2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +142,7 @@
     <Button
         android:id="@+id/sendMoney"
         android:layout_width="0dp"
-        android:layout_height="66dp"
+        android:layout_height="68dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
@@ -150,7 +160,7 @@
     <Button
         android:id="@+id/mobileTopup"
         android:layout_width="0dp"
-        android:layout_height="66dp"
+        android:layout_height="68dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="16dp"
@@ -170,27 +180,27 @@
     <Button
         android:id="@+id/raastPayment"
         android:layout_width="0dp"
-        android:layout_height="66dp"
+        android:layout_height="68dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/raast_payment"
         android:textColor="#000000"
         app:cornerRadius="16dp"
         app:icon="@drawable/raast"
-        app:iconTint="@null"
         app:iconSize="24dp"
-        app:layout_constraintTop_toBottomOf="@id/sendMoney"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/billPayments"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/billPayments" />
+        app:layout_constraintTop_toBottomOf="@id/sendMoney" />
 
 
     <!-- ROW 3 -->
     <Button
         android:id="@+id/billPayments"
         android:layout_width="0dp"
-        android:layout_height="66dp"
+        android:layout_height="68dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
@@ -205,40 +215,40 @@
         app:layout_constraintStart_toEndOf="@+id/raastPayment"
         app:layout_constraintTop_toBottomOf="@id/mobileTopup" />
 
+
+    <!-- ROW 4 -->
     <Button
         android:id="@+id/cardManage"
         android:layout_width="0dp"
-        android:layout_height="66dp"
+        android:layout_height="68dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/card_management"
         android:textColor="#000000"
         app:cornerRadius="16dp"
-        app:icon="@drawable/baseline_addchart_24"
-        app:iconTint="#7A147A"
+        app:icon="@drawable/card"
         app:iconSize="24dp"
-        app:layout_constraintTop_toBottomOf="@id/raastPayment"
+        app:iconTint="#9C27B0"
+        app:layout_constraintEnd_toStartOf="@+id/qrPay"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/qrPay" />
+        app:layout_constraintTop_toBottomOf="@id/raastPayment" />
 
-
-    <!-- ROW 4 -->
     <Button
         android:id="@+id/qrPay"
         android:layout_width="0dp"
-        android:layout_height="66dp"
+        android:layout_height="68dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#FFFFFF"
-        android:text="QR Payments"
+        android:text="@string/qr_payments"
         android:textColor="#000000"
         app:cornerRadius="16dp"
-        app:icon="@drawable/baseline_addchart_24"
+        app:icon="@drawable/qr_icons"
         app:iconSize="24dp"
-        app:iconTint="#7A147A"
+        app:iconTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardManage"
         app:layout_constraintTop_toBottomOf="@id/billPayments" />
@@ -246,20 +256,20 @@
     <Button
         android:id="@+id/zakat"
         android:layout_width="0dp"
-        android:layout_height="66dp"
+        android:layout_height="68dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/zakat_sadqaat"
         android:textColor="#000000"
         app:cornerRadius="16dp"
-        app:icon="@drawable/baseline_addchart_24"
-        app:iconTint="#7A147A"
+        app:icon="@drawable/zakat"
         app:iconSize="24dp"
-        app:layout_constraintTop_toBottomOf="@id/cardManage"
+        app:iconTint="#4CAF50"
+        app:layout_constraintEnd_toStartOf="@+id/meezanFunds"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/meezanFunds" />
+        app:layout_constraintTop_toBottomOf="@id/cardManage" />
 
 
     <!-- ROW 5 -->
@@ -267,15 +277,15 @@
     <Button
         android:id="@+id/meezanFunds"
         android:layout_width="0dp"
-        android:layout_height="66dp"
+        android:layout_height="68dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#FFFFFF"
-        android:text="Al-Meezan Mutual Funds"
+        android:text="@string/al_meezan_mutual_funds"
         android:textColor="#000000"
         app:cornerRadius="16dp"
-        app:icon="@drawable/baseline_addchart_24"
+        app:icon="@drawable/linegraph"
         app:iconSize="24dp"
         app:iconTint="#7A147A"
         app:layout_constraintEnd_toEndOf="parent"
@@ -285,25 +295,25 @@
     <Button
         android:id="@+id/payoneer"
         android:layout_width="0dp"
-        android:layout_height="66dp"
+        android:layout_height="68dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="#FFFFFF"
-        android:text="Payoneer"
+        android:text="@string/payoneer"
         android:textColor="#000000"
         app:cornerRadius="16dp"
-        app:icon="@drawable/baseline_addchart_24"
-        app:iconTint="#7A147A"
+        app:icon="@drawable/payoneer"
         app:iconSize="24dp"
-        app:layout_constraintTop_toBottomOf="@id/zakat"
+        app:iconTint="#7A147A"
+        app:layout_constraintEnd_toStartOf="@+id/feedback"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/feedback" />
+        app:layout_constraintTop_toBottomOf="@id/zakat" />
 
     <Button
         android:id="@+id/feedback"
         android:layout_width="0dp"
-        android:layout_height="66dp"
+        android:layout_height="68dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
@@ -311,9 +321,9 @@
         android:text="@string/feedback"
         android:textColor="#000000"
         app:cornerRadius="16dp"
-        app:icon="@drawable/baseline_addchart_24"
+        app:icon="@drawable/feedback"
         app:iconSize="24dp"
-        app:iconTint="#7A147A"
+        app:iconTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/payoneer"
         app:layout_constraintTop_toBottomOf="@id/meezanFunds" />
