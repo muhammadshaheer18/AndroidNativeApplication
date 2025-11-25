@@ -59,4 +59,11 @@
     <string name="qr_payments">QR Payments</string>
     <string name="al_meezan_mutual_funds">Al-Meezan Mutual Funds</string>
     <string name="payoneer">Payoneer</string>
+    <string name="search">Search</string>
+    <string name="qr">QR</string>
+    <string name="profile">profile</string>
+    <string name="notifications">notifications</string>
+    <string name="good_morning_shaheer">Good morning, Shaheer</string>
+    <string name="welcome">Welcome</string>
+    <string name="logo">logo</string>
 </resources>
