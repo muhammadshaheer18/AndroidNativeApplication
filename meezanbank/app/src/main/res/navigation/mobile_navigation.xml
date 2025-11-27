@@ -18,7 +18,12 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.app.meezanbank.ui.home.HomeFragment"
-        android:label="@string/title_home" />
+        android:label="@string/title_home">
+
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_contacts"

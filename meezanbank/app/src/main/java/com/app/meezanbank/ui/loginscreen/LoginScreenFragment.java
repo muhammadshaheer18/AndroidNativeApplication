@@ -1,5 +1,7 @@
 package com.app.meezanbank.ui.loginscreen;
 
+import static android.text.TextUtils.isEmpty;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,7 +46,17 @@ public class LoginScreenFragment extends Fragment {
                 NavController navController = Navigation.findNavController(v);
                 navController.navigate(R.id.action_navigation_login_to_navigation_home);
 
-            } else {
+            }
+            else if(enteredUsername.isEmpty() && enteredPassword.isEmpty()){
+                Toast.makeText(getContext(), "Empty Fields", Toast.LENGTH_SHORT).show();
+            }
+            else if(enteredUsername.isEmpty()){
+                Toast.makeText(getContext(),"Username Empty", Toast.LENGTH_SHORT).show();
+            }
+            else if(enteredPassword.isEmpty()){
+                Toast.makeText(getContext(),"Password Empty", Toast.LENGTH_SHORT).show();
+            }
+            else {
                 Toast.makeText(getContext(), "Invalid Credentials", Toast.LENGTH_SHORT).show();
             }
         });

@@ -7,15 +7,15 @@
     android:background="#7A147A"
     tools:context=".ui.home.HomeFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/homeToolbar"
+    <!-- Custom App Bar (Replace the old Toolbar) -->
+    <include
+        android:id="@+id/customAppBar"
+        layout="@layout/custom_app_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#7A147A"
-        android:titleTextColor="@android:color/white"
-        app:title="@string/title_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <ImageView
         android:id="@+id/roundContainer"
@@ -26,23 +26,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/customAppBar" />
+
+    <!-- IBAN -->
 
     <TextView
         android:id="@+id/accountHolderName"
-        android:layout_width="176dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="230dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="12dp"
         android:text="@string/accountHolder"
+        android:textAlignment="center"
         android:textColor="#7A147A"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/roundContainer"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@id/roundContainer"
         app:layout_constraintTop_toTopOf="@id/roundContainer" />
 
-    <!-- IBAN -->
+    <!-- SHOW BALANCE -->
 
     <TextView
         android:id="@+id/accountNumber"
@@ -54,11 +56,10 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/roundContainer"
-        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="@id/roundContainer"
         app:layout_constraintTop_toBottomOf="@id/accountHolderName" />
 
-    <!-- SHOW BALANCE -->
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
@@ -68,6 +69,7 @@
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/roundContainer"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="@id/roundContainer"
         app:layout_constraintTop_toBottomOf="@id/accountNumber" />
 
@@ -148,6 +150,7 @@
         android:layout_marginEnd="8dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/sendMoneyButton"
+        android:textSize="13sp"
         android:textColor="#000000"
         app:cornerRadius="16dp"
         app:icon="@drawable/sendmoney"
@@ -166,12 +169,13 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/mobile_topup"
+        android:textSize="13sp"
         android:textColor="#000000"
         app:cornerRadius="16dp"
         app:icon="@drawable/mobileicon"
         app:iconGravity="start"
         app:iconPadding="8dp"
-        app:iconSize="32dp"
+        app:iconSize="25dp"
         app:iconTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/sendMoney"
@@ -186,10 +190,11 @@
         android:layout_marginEnd="8dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/raast_payment"
+        android:textSize="13sp"
         android:textColor="#000000"
         app:cornerRadius="16dp"
         app:icon="@drawable/raast"
-        app:iconSize="24dp"
+        app:iconSize="22dp"
         app:iconTint="@null"
         app:layout_constraintEnd_toStartOf="@+id/billPayments"
         app:layout_constraintStart_toStartOf="parent"
@@ -206,6 +211,7 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/bill_payment"
+        android:textSize="13sp"
         android:textColor="#000000"
         app:cornerRadius="16dp"
         app:icon="@drawable/baseline_addchart_24"
@@ -226,6 +232,7 @@
         android:layout_marginEnd="8dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/card_management"
+        android:textSize="13sp"
         android:textColor="#000000"
         app:cornerRadius="16dp"
         app:icon="@drawable/card"
@@ -244,6 +251,7 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/qr_payments"
+        android:textSize="13sp"
         android:textColor="#000000"
         app:cornerRadius="16dp"
         app:icon="@drawable/qr_icons"
@@ -262,6 +270,7 @@
         android:layout_marginEnd="8dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/zakat_sadqaat"
+        android:textSize="13sp"
         android:textColor="#000000"
         app:cornerRadius="16dp"
         app:icon="@drawable/zakat"
@@ -283,6 +292,7 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/al_meezan_mutual_funds"
+        android:textSize="13sp"
         android:textColor="#000000"
         app:cornerRadius="16dp"
         app:icon="@drawable/linegraph"
@@ -301,6 +311,7 @@
         android:layout_marginEnd="8dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/payoneer"
+        android:textSize="13sp"
         android:textColor="#000000"
         app:cornerRadius="16dp"
         app:icon="@drawable/payoneer"
@@ -319,6 +330,7 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/feedback"
+        android:textSize="13sp"
         android:textColor="#000000"
         app:cornerRadius="16dp"
         app:icon="@drawable/feedback"

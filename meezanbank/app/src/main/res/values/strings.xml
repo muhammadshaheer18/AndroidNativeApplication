@@ -6,7 +6,7 @@
     <string name="title_contacts"> </string>
     <string name="title_FAQ"> </string>
     <string name="enter_password">Enter Password</string>
-    <string name="password">Password</string>
+    <string name="password">Password</string>r
     <string name="username">Username</string>
     <string name="enter_username">Enter Username</string>
     <string name="forgot_login_details">Forgot Login Details?</string>
@@ -48,9 +48,9 @@
     <string name="muhammad_shaheer">MUHAMMAD SHAHEER</string>
     <string name="accountNum">Current Account: 91929442142184</string>
     <string name="accountHolder">Muhammad Shaheer\n</string>
-    <string name="IBAN">IBAN: PK51MEZN23776482917428172</string>
+    <string name="IBAN">IBAN: PK56MEZN0001930107708159</string>
     <string name="sendMoneyButton">Send Money</string>
-    <string name="raast_payment">Raast Payment</string>
+    <string name="raast_payment">Raast Pay</string>
     <string name="VIEW_balance">SHOW BALANCE</string>
     <string name="bill_payment">Bill Payment</string>
     <string name="card_management">Card Management</string>
@@ -66,4 +66,7 @@
     <string name="good_morning_shaheer">Good morning, Shaheer</string>
     <string name="welcome">Welcome</string>
     <string name="logo">logo</string>
+    <string name="navigation_drawer">Navigation Drawer</string>
+    <string name="power_button">Power</string>
+    <string name="app_icon">App Icon</string>
 </resources>
