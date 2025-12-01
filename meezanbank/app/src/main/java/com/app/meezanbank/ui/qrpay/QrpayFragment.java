@@ -24,8 +24,6 @@ public class QrpayFragment extends Fragment {
         binding = FragmentQrpayBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textQrpay;
-        QrpayViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

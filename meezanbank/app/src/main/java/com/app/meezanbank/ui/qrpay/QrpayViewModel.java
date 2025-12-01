@@ -10,7 +10,6 @@ public class QrpayViewModel extends ViewModel {
 
     public QrpayViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Pay using this QR code");
     }
 
     public static LiveData<String> getText() {
