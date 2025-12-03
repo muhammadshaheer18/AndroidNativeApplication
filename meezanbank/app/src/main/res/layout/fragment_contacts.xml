@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,290 +7,352 @@
     android:background="@drawable/gradientbg"
     tools:context=".ui.contact.ContactsFragment">
 
-    <LinearLayout
+    <!-- Header Section -->
+    <RelativeLayout
+        android:id="@+id/headerSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/gradientbg"
-        android:orientation="vertical"
-        android:paddingBottom="32dp">
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Header Section -->
-        <RelativeLayout
-            android:id="@+id/headerSection"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/ContactPageHeadingText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="24dp"
-                android:gravity="center"
-                android:letterSpacing="0.05"
-                android:text="@string/contactHeader"
-                android:textColor="#FFFFFF"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/subtitleText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ContactPageHeadingText"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="4dp"
-                android:text="We're here to help"
-                android:textColor="#E0E0E0"
-                android:textSize="14sp" />
-        </RelativeLayout>
-
-        <!-- Main Content Card -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/mainContentCard"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/ContactPageHeadingText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="4dp">
+            android:layout_centerHorizontal="true"
+            android:text="@string/contactHeader"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ContactPageHeadingText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:text="We're here to help"
+            android:textColor="#D5D5D5"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <!-- Background Card Container -->
+    <LinearLayout
+        android:id="@+id/containerCard"
+        android:layout_width="420dp"
+        android:layout_height="781dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/roundcontainer"
+        android:backgroundTint="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerSection"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Scrollable Content -->
+        <ScrollView
+            android:id="@+id/contactScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="true"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:paddingBottom="24dp">
 
                 <!-- Head Office Section -->
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#F8F9FA"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
 
-                    <ImageView
-                        android:id="@+id/officeIcon"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@android:drawable/ic_dialog_map"
-                        app:tint="#7A147A" />
-
-                    <TextView
-                        android:id="@+id/HeadOfficeText"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:text="@string/registered_office_head_office"
-                        android:textColor="#7A147A"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/AddressText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:lineSpacingExtra="3dp"
-                    android:text="@string/meezan_address"
-                    android:textColor="#424242"
-                    android:textSize="14sp" />
+                        <!-- Section Header -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp">
 
-                <TextView
-                    android:id="@+id/emailText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="@string/email"
-                    android:textColor="#1976D2"
-                    android:textSize="14sp" />
+                            <ImageView
+                                android:id="@+id/officeIcon"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@android:drawable/ic_dialog_map"
+                                app:tint="#00A651" />
 
-                <!-- Divider -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
-                    android:background="#E0E0E0" />
+                            <TextView
+                                android:id="@+id/HeadOfficeText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/registered_office_head_office"
+                                android:textColor="#1C1C1C"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Content -->
+                        <TextView
+                            android:id="@+id/AddressText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="3dp"
+                            android:text="@string/meezan_address"
+                            android:textColor="#5A5A5A"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/emailText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/email"
+                            android:textColor="#1976D2"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
                 <!-- Customer Care Section -->
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#F8F9FA"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
 
-                    <ImageView
-                        android:id="@+id/careIcon"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@android:drawable/ic_dialog_info"
-                        android:tint="#7A147A" />
-
-                    <TextView
-                        android:id="@+id/CareUnitText"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:text="@string/customer_care_unit"
-                        android:textColor="#7A147A"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/PhoneText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/phone"
-                    android:textColor="#424242"
-                    android:textSize="14sp" />
+                        <!-- Section Header -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp">
 
-                <TextView
-                    android:id="@+id/FaxText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/fax"
-                    android:textColor="#424242"
-                    android:textSize="14sp" />
+                            <ImageView
+                                android:id="@+id/careIcon"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@android:drawable/ic_dialog_info"
+                                android:tint="#00A651" />
 
-                <TextView
-                    android:id="@+id/complainText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/complaint_text"
-                    android:textColor="#424242"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/CareUnitText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/customer_care_unit"
+                                android:textColor="#1C1C1C"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/emailComplaintText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/complaints_email"
-                    android:textColor="#1976D2"
-                    android:textSize="14sp" />
+                        <!-- Content -->
+                        <TextView
+                            android:id="@+id/PhoneText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/phone"
+                            android:textColor="#5A5A5A"
+                            android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/WebsiteText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:autoLink="web"
-                    android:text="@string/websites"
-                    android:textColor="#1976D2"
-                    android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/FaxText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/fax"
+                            android:textColor="#5A5A5A"
+                            android:textSize="14sp" />
 
-                <!-- Divider -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
-                    android:background="#E0E0E0" />
+                        <TextView
+                            android:id="@+id/complainText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/complaint_text"
+                            android:textColor="#1C1C1C"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/emailComplaintText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/complaints_email"
+                            android:textColor="#1976D2"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/WebsiteText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:autoLink="web"
+                            android:text="@string/websites"
+                            android:textColor="#1976D2"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
                 <!-- Call Center Section -->
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#F8F9FA"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
 
-                    <ImageView
-                        android:id="@+id/phoneIcon"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@android:drawable/ic_menu_call"
-                        android:tint="#7A147A" />
-
-                    <TextView
-                        android:id="@+id/callCenterHeading"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:text="@string/callCenterHeading"
-                        android:textColor="#7A147A"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/callCenterPhone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/callcenterPhone"
-                    android:textColor="#424242"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                        <!-- Section Header -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp">
 
-                <!-- Divider -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
-                    android:background="#E0E0E0" />
+                            <ImageView
+                                android:id="@+id/phoneIcon"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@android:drawable/ic_menu_call"
+                                android:tint="#00A651" />
+
+                            <TextView
+                                android:id="@+id/callCenterHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/callCenterHeading"
+                                android:textColor="#1C1C1C"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Content -->
+                        <TextView
+                            android:id="@+id/callCenterPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/callcenterPhone"
+                            android:textColor="#7A147A"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
                 <!-- Guarantee Section -->
-                <TextView
-                    android:id="@+id/GuaranteeHeading"
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/GuaranteeHeading"
-                    android:textColor="#7A147A"
-                    android:textSize="17sp"
-                    android:textStyle="bold" />
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#F8F9FA"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
 
-                <!-- Credit Department -->
-                <TextView
-                    android:id="@+id/creditDeptHeading"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="@string/credit_dept_heading"
-                    android:textColor="#7A147A"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/creditDeptName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="@string/credit_dept_name"
-                    android:textColor="#424242"
-                    android:textSize="14sp" />
+                        <!-- Section Header -->
+                        <TextView
+                            android:id="@+id/GuaranteeHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="12dp"
+                            android:text="@string/GuaranteeHeading"
+                            android:textColor="#1C1C1C"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/creditDeptPhone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/credit_dept_phone"
-                    android:textColor="#424242"
-                    android:textSize="14sp" />
+                        <!-- Credit Department -->
+                        <TextView
+                            android:id="@+id/creditDeptHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/credit_dept_heading"
+                            android:textColor="#1C1C1C"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/guaranteeEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/guarantee_email"
-                    android:textColor="#1976D2"
-                    android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/creditDeptName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/credit_dept_name"
+                            android:textColor="#5A5A5A"
+                            android:textSize="14sp" />
 
-                <!-- ADC Section -->
+                        <TextView
+                            android:id="@+id/creditDeptPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/credit_dept_phone"
+                            android:textColor="#5A5A5A"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/guaranteeEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/guarantee_email"
+                            android:textColor="#1976D2"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
+        </ScrollView>
 
     </LinearLayout>
 
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
