@@ -69,4 +69,10 @@
     <string name="navigation_drawer">Navigation Drawer</string>
     <string name="power_button">Power</string>
     <string name="app_icon">App Icon</string>
+    <string name="qr_payment">QR Payment</string>
+    <string name="open_the_scanner">Open the Scanner</string>
+    <string name="faqs_header">FAQs</string>
+    <string name="qanda"><![CDATA[Common Questions & Answers]]></string>
+    <string name="FAQ_header">FAQ</string>
+    <string name="qandnas"><![CDATA[Common Question & Answers]]></string>
 </resources>
